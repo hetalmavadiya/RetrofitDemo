@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             holder.checkBox.setButtonDrawable(R.drawable.custom_checkbox);
             holder.checkBox.setChecked(model.isChecked());
             if (model.isChecked()) {
-                holder.description.setPaintFlags(holder.description.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG); // Add strike-through
+                holder.description.setPaintFlags(holder.description.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
 
             holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -158,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
             holder.checkBox.setChecked(model.isChecked());
             if (model.isChecked()) {
-                holder.description.setPaintFlags(holder.description.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG); // Add strike-through
+                holder.description.setPaintFlags(holder.description.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
 
             holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
