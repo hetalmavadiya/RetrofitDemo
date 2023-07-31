@@ -5,6 +5,17 @@ public class TodoModel {
     private int id;
     private String title;
     private boolean completed;
+    private boolean isChecked;
+    public TodoModel(boolean isChecked) {
+        this.isChecked = isChecked;
+    }
+
+    public boolean isChecked() {
+        return isChecked;
+    }
+    public void setChecked(boolean checked) {
+        isChecked = checked;
+    }
 
     public int getUserId() {
         return userId;

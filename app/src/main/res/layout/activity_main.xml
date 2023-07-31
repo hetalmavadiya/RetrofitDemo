@@ -11,19 +11,40 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="12dp">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Unchecked items: "
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:textColor="#373737"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rec_data"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="checked items: "
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    android:textColor="#373737"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/checkedRecyclerView"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Todos Titles: "
-            android:textSize="22dp"
-            android:textStyle="bold"
-            android:textColor="#373737"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rec_data"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
 
