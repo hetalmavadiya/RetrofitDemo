@@ -1,5 +1,6 @@
 package com.example.retrofit.Activity;
 
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -96,11 +97,13 @@ public class MainActivity extends AppCompatActivity {
 
             holder.checkBox.setButtonDrawable(R.drawable.custom_checkbox);
             holder.checkBox.setChecked(model.isChecked());
+            if (model.isChecked()) {
+                holder.description.setPaintFlags(holder.description.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG); // Add strike-through
+            }
 
             holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 model.setChecked(isChecked);
                 if (isChecked) {
-
                     checkedTodoList.add(model);
                     todoModelList.remove(model);
                 } else {
@@ -154,11 +157,13 @@ public class MainActivity extends AppCompatActivity {
             holder.checkBox.setOnCheckedChangeListener(null);
 
             holder.checkBox.setChecked(model.isChecked());
+            if (model.isChecked()) {
+                holder.description.setPaintFlags(holder.description.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG); // Add strike-through
+            }
 
             holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
                 model.setChecked(isChecked);
                 if (isChecked) {
-                    holder.checkBox.setButtonDrawable(R.drawable.custom_checkbox);
                     checkedTodoList.add(model);
                     todoModelList.remove(model);
                 } else {

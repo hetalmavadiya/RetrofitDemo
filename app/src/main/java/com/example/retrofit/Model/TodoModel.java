@@ -49,3 +49,6 @@ public class TodoModel {
         this.completed = completed;
     }
 }
+
+
+//holder.description.setPaintFlags(holder.description.getPaintFlags()| Paint.STRIKE_THRU_TEXT_FLAG);
